@@ -1,0 +1,29 @@
+%GitLab colors
+\definecolor{yamlblue}{rgb}{0, 0.565, 0.7098}
+\definecolor{yamlred}{rgb}{0.86666, 0.06666, 0.2666}
+
+%new commands for yaml style
+\newcommand\YAMLcolonstyle{\color{black}\mdseries}
+\newcommand\YAMLvaluestyle{\color{yamlred}\mdseries}
+\newcommand\minusStyle{\color{black}-
+    \color{yamlred}\mdseries}
+
+%settings for yaml language
+\lstdefinelanguage{yaml}{
+    keepspaces=true,
+    backgroundcolor =\color{whitesmoke},
+    basicstyle= \footnotesize,
+    firstnumber = 1,
+    numbers = left,
+    stepnumber = 1,
+    numbersep = 5pt,
+    keywordstyle=\color{yamlblue},
+    identifierstyle = \color{yamlblue},
+    commentstyle = \color{yamlred},
+    string=[b]",
+    morestring=[b]\$,  
+    delim=**[il][\minusStyle]{-},
+    moredelim=**[il][\YAMLcolonstyle{:}\YAMLvaluestyle]{:},
+    stringstyle = \color{yamlred},
+    numberstyle = \tiny
+}
